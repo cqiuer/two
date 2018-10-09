@@ -5,11 +5,27 @@
 	<title>First Js</title>
 </head>
 <body>
-<p>
-	这里需要测试一下 git的修改和测试
-</p>
+<p>这里需要测试一下 git的修改和测试</p>
+<button onclick="alert(123213)">单元测试</button>
+<div id="before" onclick="abs()">
+	这里以前是一只小猪
+</div>
+
+
 </body>
 <script>
-	document.write('this is my first js!');
+document.write('this is my first js!');
+
+function abs() {
+	object = document.getElementById('before');
+	if (object.innerText === '这里以前是一只小猪') {
+		object.innerText = '现在是一只小猫。';
+		object.style.color = '#ff0000'
+	} else {
+		object.innerText = '这里以前是一只小猪';
+		object.style.color = '#983aff'
+	}
+
+}
 </script>
 </html>
